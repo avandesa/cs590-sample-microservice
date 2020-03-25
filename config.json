@@ -1,36 +1,46 @@
 {
-	"kind": "Pod",
-	"apiVersion": "v1",
-	"metadata": {
-		"name": "sample-application",
-		"labels": {
-			"app": "webapp"
-    		}
-	},
-	"spec": {
-		"containers": [
-			{
-				"name": "user-service",
-				"image": "user-service:latest",
-				"imagePullPolicy": "IfNotPresent",
-				"ports": [
-					{
-						"containerPort": 8080
-					}
-				],
-				"command": ["./main"]
-			},
-			{
-				"name": "time-service",
-				"image": "time-service:latest",
-				"imagePullPolicy": "IfNotPresent",
-				"ports": [
-					{
-						"containerPort": 8081
-					}
-				],
-				"command": ["./main"]
-			}
-		]
-	}
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "sample-application",
+        "labels": {
+            "app": "webapp"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "user-service",
+                "image": "user-service:latest",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                    {
+                        "containerPort": 8080
+                    }
+                ],
+                "command": ["./main"]
+            },
+            {
+                "name": "time-service",
+                "image": "time-service:latest",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                    {
+                        "containerPort": 8081
+                    }
+                ],
+                "command": ["./main"]
+            },
+            {
+                "name": "fortune-service",
+                "image": "fortune-service:latest",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                    {
+                        "containerPort": 8082
+                    }
+                ]
+            }
+        ]
+    }
 }

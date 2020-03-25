@@ -4,7 +4,7 @@ use {tokio::process::Command, warp::Filter};
 async fn main() {
     let fortune = warp::path("fortune").and_then(fortune);
 
-    warp::serve(fortune).run(([127, 0, 0, 1], 8082)).await;
+    warp::serve(fortune).run(([0, 0, 0, 0], 8082)).await;
 }
 
 async fn fortune() -> Result<impl warp::Reply, std::convert::Infallible> {
