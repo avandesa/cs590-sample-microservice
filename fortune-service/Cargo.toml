@@ -1,0 +1,10 @@
+[package]
+name = "fortune-service"
+version = "0.1.0"
+authors = ["Alex van de Sandt <alex@avandesa.dev>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+warp = "0.2.2"
+tokio = { version = "0.2.13", features = ["macros", "process"] }
