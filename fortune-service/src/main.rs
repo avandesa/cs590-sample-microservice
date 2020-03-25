@@ -8,7 +8,7 @@ async fn main() {
 }
 
 async fn fortune() -> Result<impl warp::Reply, std::convert::Infallible> {
-    let output = Command::new("fortune")
+    let output = Command::new("/usr/games/fortune")
         .output()
         .await
         .expect("error running command");
